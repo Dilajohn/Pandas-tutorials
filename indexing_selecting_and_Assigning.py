@@ -66,3 +66,8 @@ For example, to select the country column from just the first, second, and third
 print(reviews.iloc[[1,2,3],0])  # Select the second, third, and fourth rows of the first column of the DataFrame using
                                 #iloc,
                                 #which returns a Series
+                                
+#Finally, it's worth knowing that negative numbers can be used in selection.
+# This will start counting forwards from the end of the values.
+# So for example here are the last five elements of the dataset
+print(reviews.iloc[-5:0])  # Select the last five rows of the DataFrame using iloc, which returns a DataFrame
