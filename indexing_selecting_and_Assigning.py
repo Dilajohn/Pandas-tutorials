@@ -10,7 +10,7 @@ pd.set_option("display.max_rows", 5)  # Set the maximum number of rows to displa
 
 #print(reviews.country)  # Access the 'country' column of the DataFrame, which returns a Series
 #print(reviews["country"])  # Access the 'country' column using bracket notation, which also returns a Series
-print(reviews["country"][0])  # Access the first element of the 'country' column, which returns the country of the first review
+#print(reviews["country"][0])  # Access the first element of the 'country' column, which returns the country of the first review
 
 
 #--Indexing in pandas--
@@ -33,3 +33,14 @@ To select the first row of data in a DataFrame, we may use the following:
 reviews.iloc[0]  # Select the first row of the DataFrame using iloc, which returns a Series representing the first review
 
 """
+print(reviews.iloc[0])  # Select the first row of the DataFrame using iloc, which returns a Series representing 
+                        #the first review
+
+""" Both loc and iloc are row-first, column-second. This is the opposite of what we do in native Python,
+which is column-first, row-second.
+
+This means that it's marginally easier to retrieve rows, and marginally harder to get retrieve columns.
+To get a column with iloc, we can do the following """
+
+print(reviews.iloc[:, 0])  # Select the first column of the DataFrame using iloc, which returns a Series
+                           #representing the 'country' column
