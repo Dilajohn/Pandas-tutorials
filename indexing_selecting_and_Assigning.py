@@ -33,7 +33,7 @@ To select the first row of data in a DataFrame, we may use the following:
 reviews.iloc[0]  # Select the first row of the DataFrame using iloc, which returns a Series representing the first review
 
 """
-print(reviews.iloc[0])  # Select the first row of the DataFrame using iloc, which returns a Series representing 
+#print(reviews.iloc[0])  # Select the first row of the DataFrame using iloc, which returns a Series representing 
                         #the first review
 
 """ Both loc and iloc are row-first, column-second. This is the opposite of what we do in native Python,
@@ -42,5 +42,14 @@ which is column-first, row-second.
 This means that it's marginally easier to retrieve rows, and marginally harder to get retrieve columns.
 To get a column with iloc, we can do the following """
 
-print(reviews.iloc[:, 0])  # Select the first column of the DataFrame using iloc, which returns a Series
-                           #representing the 'country' column
+#print(reviews.iloc[:, 0])  # Select the first column of the DataFrame using iloc, which returns a Series
+                           #representing the 'country'
+                           
+""" On its own, the : operator, which also comes from native Python, means "everything".
+When combined with other selectors, however, it can be used to indicate a range of values. 
+For example, to select the country column from just the first, second, and third row, we would do"""
+
+print(reviews.iloc[:3,0])  # Select the first three rows of the first column of the DataFrame using iloc,
+                           #which returns a Series
+                           
+
