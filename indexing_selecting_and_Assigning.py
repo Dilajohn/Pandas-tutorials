@@ -11,3 +11,25 @@ pd.set_option("display.max_rows", 5)  # Set the maximum number of rows to displa
 #print(reviews.country)  # Access the 'country' column of the DataFrame, which returns a Series
 #print(reviews["country"])  # Access the 'country' column using bracket notation, which also returns a Series
 print(reviews["country"][0])  # Access the first element of the 'country' column, which returns the country of the first review
+
+
+#--Indexing in pandas--
+""" The indexing operator and attribute selection are nice because they work just like they do in the rest of the Python ecosystem.
+As a novice, this makes them easy to pick up and use. However, pandas has its own accessor operators, loc and iloc. For more advanced operations,
+these are the ones you're supposed to be using.
+
+
+Indexing in pandas
+
+The indexing operator and attribute selection are nice because they work just
+like they do in the rest of the Python ecosystem. As a novice, this makes them easy to pick up and use. However,
+pandas has its own accessor operators, loc and iloc. For more advanced operations, these are the ones you're supposed to be using.
+Index-based selection
+
+Pandas indexing works in one of two paradigms. The first is index-based selection: 
+selecting data based on its numerical position in the data. iloc follows this paradigm.
+
+To select the first row of data in a DataFrame, we may use the following:
+reviews.iloc[0]  # Select the first row of the DataFrame using iloc, which returns a Series representing the first review
+
+"""
