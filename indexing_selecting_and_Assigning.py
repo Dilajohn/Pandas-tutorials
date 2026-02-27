@@ -58,9 +58,6 @@ For example, to select the country column from just the first, second, and third
 #print(reviews.iloc[1:3,0])  # Select the second and third rows of the first column of the DataFrame using iloc,
                            #which returns a Series
 
-
-
-
 #It's also possible to pass a list of integers to iloc. This allows us to select specific rows and
 # columns by their integer position. For example, to select the first and third rows of the first column, we would do:
 print(reviews.iloc[[1,2,3],0])  # Select the second, third, and fourth rows of the first column of the DataFrame using
