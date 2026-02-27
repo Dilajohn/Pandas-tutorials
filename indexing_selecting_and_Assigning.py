@@ -49,7 +49,11 @@ To get a column with iloc, we can do the following """
 When combined with other selectors, however, it can be used to indicate a range of values. 
 For example, to select the country column from just the first, second, and third row, we would do"""
 
-print(reviews.iloc[:3,0])  # Select the first three rows of the first column of the DataFrame using iloc,
+#print(reviews.iloc[:3,0])  # Select the first three rows of the first column of the DataFrame using iloc,
                            #which returns a Series
                            
 
+#Or, to select just the second and third entries, we would do:
+
+print(reviews.iloc[1:3,0])  # Select the second and third rows of the first column of the DataFrame using iloc,
+                           #which returns a Series
