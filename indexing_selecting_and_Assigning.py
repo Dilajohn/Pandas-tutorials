@@ -82,4 +82,15 @@ the dataset like a big matrix (a list of lists), one that we have to index into 
 uses the information in the indices to do its work. Since your dataset usually has meaningful indices, 
 it's usually easier to do things using loc instead. For example, here's one operation that's much easier using loc:
 """
-print(reviews.loc[:,['taster_name', 'taster_twitter_handle', 'points']])
+#print(reviews.loc[:,['taster_name', 'taster_twitter_handle', 'points']])
+
+"""
+Manipulating the index¶
+
+Label-based selection derives its power from the labels in the index. Critically, the index we use is not immutable. We can manipulate the index in any way we see fit.
+
+The set_index() method can be used to do the job. Here is what happens when we set_index to the title field:
+"""
+
+print(reviews.set_index('title'))  # Set the index of the DataFrame to the 'title' column using set_index, 
+                                   #which returns a new DataFrame with the new index
