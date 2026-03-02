@@ -34,7 +34,7 @@ reviews.iloc[0]  # Select the first row of the DataFrame using iloc, which retur
 
 """
 #print(reviews.iloc[0])  # Select the first row of the DataFrame using iloc, which returns a Series representing 
-                        #the first review
+                         #the first review
 
 """ Both loc and iloc are row-first, column-second. This is the opposite of what we do in native Python,
 which is column-first, row-second.
