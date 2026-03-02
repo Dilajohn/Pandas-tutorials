@@ -119,12 +119,17 @@ We also wanted to know which ones are better than average. Wines are reviewed on
 so this could mean wines that accrued at least 90 points.
 We can use the ampersand (&) to bring the two questions together"""
 
-print(reviews.loc[(reviews.country == "Italy") & (reviews.points >= 90)])  # Select all rows of the DataFrame where the
+#print(reviews.loc[(reviews.country == "Italy") & (reviews.points >= 90)])  # Select all rows of the DataFrame where the
 #'country' column is equal to "Italy" and the 'points' column is greater than or equal to 90 using loc,
 #which returns a DataFrame of Italian wines with at least 90 points
 
 
 #Suppose we'll buy any wine that's made in Italy or which is rated above average. For this we use a pipe (|):
-print(reviews.loc[(reviews.country == "Italy") | (reviews.points >= 90)])  # Select all rows of the DataFrame where the
+
+#print(reviews.loc[(reviews.country == "Italy") | (reviews.points >= 90)])  # Select all rows of the DataFrame where the
+
 #'country' column is equal to "Italy" or the 'points' column is greater than or equal to 90 using loc,
 #which returns a DataFrame of Italian wines or wines with at least 90 points
+
+
+print(reviews.loc[reviews.country.isin(["Italy", "France"])])
