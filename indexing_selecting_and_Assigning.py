@@ -104,6 +104,21 @@ For example, suppose that we're interested specifically in better-than-average w
 
 We can start by checking if each wine is Italian or not:"""
 
-print(reviews.country == "Italy")  # Create a boolean Series indicating whether each wine is from Italy by
+#print(reviews.country == "Italy")  # Create a boolean Series indicating whether each wine is from Italy by
                                    #comparing the 'country' column to the string "Italy"
                                    
+"""This operation produced a Series of True/False booleans based on the country of each record.
+This result can then be used inside of loc to select the relevant data:"""
+
+print(reviews.loc[reviews.country =="Italy"])  # Select all rows of the DataFrame where the 'country' column is equal
+                                               #to "Italy" using loc,
+                                               #which returns a DataFrame of Italian wines
+"""This DataFrame has ~20,000 rows. The original had ~130,000. That means that around 15% of wines originate from 
+Italy.
+We also wanted to know which ones are better than average. Wines are reviewed on a 80-to-100 point scale,
+so this could mean wines that accrued at least 90 points.
+We can use the ampersand (&) to bring the two questions together"""
+
+print(reviews.loc[(reviews.country == "Italy") & (reviews.points >= 90)])  # Select all rows of the DataFrame where the
+#'country' column is equal to "Italy" and the 'points' column is greater than or equal to 90 using loc,
+#which returns a DataFrame of Italian wines with at least 90 points
