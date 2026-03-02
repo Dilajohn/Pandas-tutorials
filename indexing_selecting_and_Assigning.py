@@ -68,3 +68,18 @@ print(reviews.iloc[[1,2,3],0])  # Select the second, third, and fourth rows of t
 # This will start counting forwards from the end of the values.
 # So for example here are the last five elements of the dataset
 print(reviews.iloc[-5:])  # Select the last five rows of the DataFrame using iloc, which returns a DataFrame
+
+
+"""
+Label-based selection
+
+The second paradigm for attribute selection is the one followed by the loc operator: label-based selection.
+In this paradigm, it's the data index value, not its position, which matters. This means that the first row of data is
+not necessarily the row with index 0, and the first column of data is not necessarily the column with index 0.
+
+iloc is conceptually simpler than loc because it ignores the dataset's indices. When we use iloc we treat 
+the dataset like a big matrix (a list of lists), one that we have to index into by position. loc, by contrast,
+uses the information in the indices to do its work. Since your dataset usually has meaningful indices, 
+it's usually easier to do things using loc instead. For example, here's one operation that's much easier using loc:
+"""
+print(reviews.loc[:,['taster_name', 'taster_twitter_handle', 'points']])
