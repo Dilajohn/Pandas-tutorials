@@ -92,5 +92,18 @@ Label-based selection derives its power from the labels in the index. Critically
 The set_index() method can be used to do the job. Here is what happens when we set_index to the title field:
 """
 
-print(reviews.set_index('title'))  # Set the index of the DataFrame to the 'title' column using set_index, 
+#print(reviews.set_index('title'))  # Set the index of the DataFrame to the 'title' column using set_index, 
                                    #which returns a new DataFrame with the new index
+                                   
+"""Conditional selection
+
+So far we've been indexing various strides of data, using structural properties of the DataFrame itself.
+To do interesting things with the data, however, we often need to ask questions based on conditions.
+
+For example, suppose that we're interested specifically in better-than-average wines produced in Italy.
+
+We can start by checking if each wine is Italian or not:"""
+
+print(reviews.country == "Italy")  # Create a boolean Series indicating whether each wine is from Italy by
+                                   #comparing the 'country' column to the string "Italy"
+                                   
