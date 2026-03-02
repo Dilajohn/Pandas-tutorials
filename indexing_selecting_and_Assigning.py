@@ -132,4 +132,18 @@ We can use the ampersand (&) to bring the two questions together"""
 #which returns a DataFrame of Italian wines or wines with at least 90 points
 
 
-print(reviews.loc[reviews.country.isin(["Italy", "France"])])
+#print(reviews.loc[reviews.country.isin(["Italy", "France"])])
+
+"""
+
+Pandas comes with a few built-in conditional selectors, two of which we will highlight here.
+
+The first is isin. isin is lets you select data whose value "is in" a list of values. 
+For example, here's how we can use it to select wines only from Italy or France:
+
+The second is isnull (and its companion notnull). These methods let you highlight values which are (or are not)
+empty (NaN). For example, to filter out wines lacking a price tag in the dataset, here's what we would do:
+"""
+
+print(reviews.loc[reviews.price.notnull()])  # Select all rows of the DataFrame where the 'price' 
+#column is not null using loc,
