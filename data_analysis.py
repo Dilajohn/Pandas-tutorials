@@ -12,6 +12,8 @@ wines_reviews = pd.read_csv("winemag-data-130k-v2.csv", index_col=0)   # Load th
 #print(wines_reviews.iloc[:3,0])
 #print(wines_reviews.iloc[1:3,0])
 
+print(wines_reviews.iloc[[1,2,3,], 0])
+
 
 
 
