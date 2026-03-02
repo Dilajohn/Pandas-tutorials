@@ -110,7 +110,7 @@ We can start by checking if each wine is Italian or not:"""
 """This operation produced a Series of True/False booleans based on the country of each record.
 This result can then be used inside of loc to select the relevant data:"""
 
-print(reviews.loc[reviews.country =="Italy"])  # Select all rows of the DataFrame where the 'country' column is equal
+#print(reviews.loc[reviews.country =="Italy"])  # Select all rows of the DataFrame where the 'country' column is equal
                                                #to "Italy" using loc,
                                                #which returns a DataFrame of Italian wines
 """This DataFrame has ~20,000 rows. The original had ~130,000. That means that around 15% of wines originate from 
@@ -122,3 +122,9 @@ We can use the ampersand (&) to bring the two questions together"""
 print(reviews.loc[(reviews.country == "Italy") & (reviews.points >= 90)])  # Select all rows of the DataFrame where the
 #'country' column is equal to "Italy" and the 'points' column is greater than or equal to 90 using loc,
 #which returns a DataFrame of Italian wines with at least 90 points
+
+
+#Suppose we'll buy any wine that's made in Italy or which is rated above average. For this we use a pipe (|):
+print(reviews.loc[(reviews.country == "Italy") | (reviews.points >= 90)])  # Select all rows of the DataFrame where the
+#'country' column is equal to "Italy" or the 'points' column is greater than or equal to 90 using loc,
+#which returns a DataFrame of Italian wines or wines with at least 90 points
