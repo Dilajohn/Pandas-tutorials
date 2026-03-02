@@ -145,5 +145,15 @@ The second is isnull (and its companion notnull). These methods let you highligh
 empty (NaN). For example, to filter out wines lacking a price tag in the dataset, here's what we would do:
 """
 
-print(reviews.loc[reviews.price.notnull()])  # Select all rows of the DataFrame where the 'price' 
+#print(reviews.loc[reviews.price.notnull()])  # Select all rows of the DataFrame where the 'price' 
 #column is not null using loc,
+#which returns a DataFrame of wines with a price tag
+
+
+#Assigning data
+#Going the other way, assigning data to a DataFrame is easy. You can assign either a constant value
+
+reviews['critic'] = 'everyone'  # Create a new column 'critic' in the DataFrame and assign it the constant value "everyone"
+print(reviews['critic'])  # Print the DataFrame to see the new 'critic' column with the assigned value
+
+
