@@ -156,4 +156,8 @@ empty (NaN). For example, to filter out wines lacking a price tag in the dataset
 reviews['critic'] = 'everyone'  # Create a new column 'critic' in the DataFrame and assign it the constant value "everyone"
 print(reviews['critic'])  # Print the DataFrame to see the new 'critic' column with the assigned value
 
+# Or with an iterable of values:
+reviews['index_backwards'] = range(len(reviews), 0, -1)  # Create a new column 'index_backwards' in the DataFrame and assign it a range of values counting backwards from the length of the DataFrame to 1
+print(reviews['index_backwards'])  # Print the DataFrame to see the new 'index_backwards' column with the assigned values
+
 
