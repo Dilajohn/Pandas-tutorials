@@ -19,7 +19,11 @@ wines_reviews = pd.read_csv("winemag-data-130k-v2.csv", index_col=0)   # Load th
 
 #print(wines_reviews.loc[:, ['taster_name', 'taster_twitter_handle', 'points']])
 
-print(wines_reviews.set_index('title'))
+#print(wines_reviews.set_index('title'))
+
+print(wines_reviews.loc[wines_reviews.country.isin(['Italy', 'France'])])
+
+
 
 
 
