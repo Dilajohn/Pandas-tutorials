@@ -37,3 +37,10 @@ Hint: format your output as a pandas Series"""
 
 first_descriptions = reviews.description.iloc[:10]
 print(first_descriptions)
+
+#Note that many other options will return a valid result, such as desc.head(10) and reviews.loc[:9, "description"]. 
+ops_description = desc.head(10)
+print(ops_description)
+
+ops_2_description = reviews.loc[:9, "description"]
+print(ops_2_description)
