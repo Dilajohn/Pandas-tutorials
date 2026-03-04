@@ -50,3 +50,8 @@ print(ops_2_description)
 #In other words, generate the following DataFrame:
 sample_reviews = reviews.iloc[[1,2,3,5,8]]
 print(sample_reviews)
+
+#option 2 of the generating the same DataFrame
+cols = [1,2,3,5,8]
+df = reviews.iloc[cols]
+print(df)
