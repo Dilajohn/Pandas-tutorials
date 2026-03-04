@@ -44,3 +44,9 @@ print(ops_description)
 
 ops_2_description = reviews.loc[:9, "description"]
 print(ops_2_description)
+
+
+#Select the records with index labels 1, 2, 3, 5, and 8, assigning the result to the variable sample_reviews.
+#In other words, generate the following DataFrame:
+sample_reviews = reviews.iloc[[1,2,3,5,8]]
+print(sample_reviews)
