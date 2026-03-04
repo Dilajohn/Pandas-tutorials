@@ -26,3 +26,14 @@ print(Third_description)
 
 Fourth_description = reviews.description[0]
 print(Fourth_description)
+
+#Select the first row of data (the first record) from reviews, assigning it to the variable first_row
+first_row = reviews.iloc[0]
+print(first_row)
+
+"""4.
+Select the first 10 values from the description column in reviews, assigning the result to variable first_descriptions.
+Hint: format your output as a pandas Series"""
+
+first_descriptions = reviews.description.iloc[:10]
+print(first_descriptions)
