@@ -11,3 +11,18 @@ print(reviews.description)
 print(reviews['description'])
 desc = reviews['description']
 print(type(desc))
+
+#Select the first value from the description column of reviews, assigning it to variable first_description
+first_description = reviews.description[0]
+print(first_description)
+"""first_description = reviews.description.iloc[0]
+Note that while this is the preferred way to obtain the entry in the DataFrame, 
+many other options will return a valid result, such as reviews.description.loc[0], reviews.description[0]"""
+Second_description = reviews.description.iloc[0]
+print(Second_description)
+
+Third_description = reviews.description.loc[0]
+print(Third_description)
+
+Fourth_description = reviews.description[0]
+print(Fourth_description)
