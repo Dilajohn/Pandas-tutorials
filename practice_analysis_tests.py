@@ -23,4 +23,5 @@ index = ["2015 Sales", "2016 Sales", "2017 Sales", "2018 Sales", "2019 Sales"]
 name = "Cost"
 print(pd.Series(cost, index=index, name=name))         
                                
-                               
+print(wines_reviews.columns)  # Print the column names of the DataFrame, which can be useful for 
+                              #understanding the structure of the data and for selecting specific columns for analysis.  
