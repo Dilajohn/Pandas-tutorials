@@ -24,4 +24,9 @@ name = "Cost"
 print(pd.Series(cost, index=index, name=name))         
                                
 print(wines_reviews.columns)  # Print the column names of the DataFrame, which can be useful for 
-                              #understanding the structure of the data and for selecting specific columns for analysis.  
+                              #understanding the structure of the data and for selecting specific columns for analysis.
+                              
+
+print(wines_reviews.index)  # Print the index of the DataFrame, which can be useful for understanding the 
+                            #structure of the data and for selecting specific rows for analysis.
+  
