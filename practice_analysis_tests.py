@@ -7,3 +7,7 @@ print(wines_reviews.info)  # Print a concise summary of the DataFrame,
                            
 print(wines_reviews.describe)  # Print a statistical summary of the DataFrame, including count, mean, std, min,
                                #25%, 50%, 75%, and max values for each numeric column
+                               
+print(wines_reviews.head())  # Print the first few rows of the DataFrame to get an overview of the data               
+                               
+                               
