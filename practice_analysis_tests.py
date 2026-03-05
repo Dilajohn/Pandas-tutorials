@@ -30,3 +30,24 @@ print(wines_reviews.columns)  # Print the column names of the DataFrame, which c
 print(wines_reviews.index)  # Print the index of the DataFrame, which can be useful for understanding the 
                             #structure of the data and for selecting specific rows for analysis.
   
+print(wines_reviews.dtypes)  # Print the data types of each column in the DataFrame, which can be useful for
+                              #understanding
+                              #the types of data you are working with and for selecting appropriate methods 
+                              # for analysis.
+                              
+print(wines_reviews.shape)  # Print the shape of the DataFrame, which is a tuple representing the number of rows
+                            #and columns in the DataFrame. This can be useful for understanding the size of the data and for selecting 
+                            #appropriate methods for analysis.
+print(wines_reviews.size)  # Print the total number of elements in the DataFrame, which is the product of the 
+                           #number of rows and columns.
+                           
+print(wines_reviews.values)  # Print the values of the DataFrame as a NumPy array, which can be useful for performing numerical operations 
+                             #on the data or for converting the DataFrame to a different format for analysis.
+
+print(wines_reviews.info)  # Print a concise summary of the DataFrame, including the number of non-null entries and
+                           #data types of each column.
+                           
+print(wines_reviews.describe)  # Print a statistical summary of the DataFrame, including count, mean, std, min,
+                               #25%, 50%, 75%, and max values for each numeric column.
+                               
+print(wines_reviews.iloc[2])
