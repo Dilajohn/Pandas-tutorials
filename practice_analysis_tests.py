@@ -14,6 +14,8 @@ print(pd.DataFrame({'yes': [50, 24, 75], 'No' : [43, 78, 12]}))
 
 print(pd.DataFrame({"Bob": ['hello', "I'm Bob the builder", "I can build anything you want"],
                     "Alice": ['hello', 'I am Alice the builder', 'I can build anything you want']},
-                    index = ['greeting', 'introduction', 'offer']))            
+                    index = ['greeting', 'introduction', 'offer']))  
+
+print(pd.Series([1, 2, 3, 4, 5], index=['a', 'b', 'c', 'd', 'e']))          
                                
                                
