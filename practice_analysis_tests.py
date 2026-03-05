@@ -16,6 +16,11 @@ print(pd.DataFrame({"Bob": ['hello', "I'm Bob the builder", "I can build anythin
                     "Alice": ['hello', 'I am Alice the builder', 'I can build anything you want']},
                     index = ['greeting', 'introduction', 'offer']))  
 
-print(pd.Series([1, 2, 3, 4, 5], index=['a', 'b', 'c', 'd', 'e']))          
+print(pd.Series([1, 2, 3, 4, 5], index=['a', 'b', 'c', 'd', 'e'])) 
+
+cost = [1000, 2000, 3000, 4000, 5000]
+index = ["2015 Sales", "2016 Sales", "2017 Sales", "2018 Sales", "2019 Sales"]
+name = "Cost"
+print(pd.Series(cost, index=index, name=name))         
                                
                                
