@@ -55,3 +55,5 @@ print(sample_reviews)
 cols = [1,2,3,5,8]
 df = reviews.iloc[cols]
 print(df)
+
+
