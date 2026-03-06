@@ -53,3 +53,6 @@ print(wines_reviews.describe)  # Print a statistical summary of the DataFrame, i
 print(wines_reviews.iloc[2])
 print(wines_reviews.iloc[:, 3])  # Select all rows of the fourth column of the DataFrame using iloc, which returns 
                                  #a Series
+                                
+#selecting wines from only Italy and France 
+print(wines_reviews.loc[wines_reviews.country.isin(["Italy", "France "])])
